@@ -1,0 +1,19 @@
+搭建私有的git
+安装git
+yum install git
+git --version
+添加git用户
+adduser -r -c 'git version control' -d /home/git -m git
+设置密码：
+passwd git
+切换到git用户
+su git
+创建远程仓库
+cd ~
+mkdir repo1
+cd repo1
+git init --bare
+
+推送本地仓库到私有远程仓库
+ssh://git@192.168.238.128/home/git/pro1
+输入密码：git
